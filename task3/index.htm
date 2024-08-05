@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .converter-container {
+      max-width: 500px;
+      margin: auto;
+      margin-top: 50px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .result {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    body{
+        background-image: url(../task1/bgimg.jpg);
+        background-repeat:no-repeat ;
+        background-size: cover; /* Cover the entire container */
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="converter-container">
+      <h2>Temperature Converter</h2>
+      <div class="form-group">
+        <label for="temperature">Enter Temperature:</label>
+        <input type="number" class="form-control" id="temperature" placeholder="Enter temperature">
+      </div>
+      <div class="form-group">
+        <label for="conversion">Select Conversion:</label>
+        <select class="form-select" id="conversion">
+          <option value="c_to_f">Celsius to Fahrenheit</option>
+          <option value="f_to_c">Fahrenheit to Celsius</option>
+          <option value="k_to_f">Kelvin to Fahrenheit</option>
+          <option value="f_to_k">Fahrenheit to Kelvin</option>
+          <option value="c_to_k">Celsius to Kelvin</option>
+          <option value="k_to_c">Kelvin to Celsius</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="convertTemperature()">Convert</button>
+      <div class="result" id="result"></div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function convertTemperature() {
+      // Get temperature value and selected conversion type
+      var temperature = parseFloat(document.getElementById('temperature').value);
+      var conversionType = document.getElementById('conversion').value;
+
+      // Perform temperature conversion based on selected conversion type
+      switch (conversionType) {
+        case 'c_to_f':
+          var result = (temperature * 9/5) + 32;
+          document.getElementById('result').innerText = temperature + '°C = ' + result.toFixed(2) + '°F';
+          break;
+        case 'f_to_c':
+          var result = (temperature - 32) * 5/9;
+          document.getElementById('result').innerText = temperature + '°F = ' + result.toFixed(2) + '°C';
+          break;
+        case 'k_to_f':
+          var result = (temperature - 273.15) * 9/5 + 32;
+          document.getElementById('result').innerText = temperature + 'K = ' + result.toFixed(2) + '°F';
+          break;
+        case 'f_to_k':
+          var result = (temperature - 32) * 5/9 + 273.15;
+          document.getElementById('result').innerText = temperature + '°F = ' + result.toFixed(2) + 'K';
+          break;
+        case 'c_to_k':
+          var result = temperature + 273.15;
+          document.getElementById('result').innerText = temperature + '°C = ' + result.toFixed(2) + 'K';
+          break;
+        case 'k_to_c':
+          var result = temperature - 273.15;
+          document.getElementById('result').innerText = temperature + 'K = ' + result.toFixed(2) + '°C';
+          break;
+        default:
+          document.getElementById('result').innerText = 'Invalid conversion type';
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

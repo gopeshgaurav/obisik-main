@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <!-- Page Loader Start -->
+    <div class="page-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- Page Loader End -->
+
+    <!-- Background Circles Start -->
+    <div class="bg-circles">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="circle-4"></div>
+    </div>
+    <!-- Background Circles End -->
+
+    <!-- Overlay Start -->
+    <div class="overlay"></div>
+    <!-- Overlay End -->
+
+    <!-- Main Start -->
+    <div class="main hidden">
+        <!-- Header Start -->
+        <header class="header">
+            <div class="container">
+                <div class="row flex-end">
+                    <button type="button" class="nav-toggler">
+                        <span></span>
+                    </button>
+                    <nav class="nav">
+                        <div class="nav-inner">
+                            <ul>
+                                <li><a href="#home" class="nav-item link-item">home</a></li>
+                                <li><a href="#about" class="nav-item link-item">about</a></li>
+                                <!-- Removed Portfolio Section -->
+                                <li><a href="#contact" class="nav-item link-item">contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Home Section Start -->
+        <section class="home-section align-items-center" id="home">
+            <!-- Content of Home Section -->
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="home-text">
+                        <p>Hello, I'm</p>
+                        <h1>Gopesh Gaurav</h1>
+                        <h2>Web Developer</h2>
+                        <a href="#about" class="btn link-item">more about me</a>
+                        <a href="#contact" class="btn link-item">contact me</a>
+                    </div>
+                    <div class="home-img">
+                        <div class="img-box">
+                            <img src="./zongnan-bao-x-3K73yUqSI-unsplash.jpg" alt="profile-img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Home Section End -->
+
+        <!-- About Section Start -->
+        <section class="about-section sec-padding" id="about">
+            <!-- Content of About Section -->
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>About Me</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="about-img">
+                        <div class="img-box">
+                            <!-- <img src="images/about-img.png" alt="about image" /> -->
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            I'm a passionate web developer with a strong background in HTML, CSS, and JavaScript. I love to create beautiful and responsive websites that provide a great user experience.
+                        </p>
+                        <h3>Skills</h3>
+                        <div class="skills">
+                            <div class="skill-item">HTML</div>
+                            <div class="skill-item">CSS</div>
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">Bootstrap</div>
+                        </div>
+                        <div class="about-tabs">
+                            <button type="button" class="tab-item active" data-target="#education">Education</button>
+                            <button type="button" class="tab-item" data-target="#experience">Experience</button>
+                        </div>
+                        <div class="tab-content active" id="education">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="date">2020-2024</span>
+                                    <h4>Bachelor's Degree - JSSATE</h4>
+                                    <p>Graduated with a major in Computer Science.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="experience">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="date">2019-Present</span>
+                                    <h4>Web Developer - XYZ Company</h4>
+                                    <p>Responsible for designing and developing responsive websites using HTML, CSS, and JavaScript.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
+
+        <!-- Removed Portfolio Section -->
+
+        <!-- Contact Section Start -->
+        <section class="contact-section sec-padding" id="contact">
+            <!-- Content of Contact Section -->
+        </section>
+        <!-- Contact Section End -->
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Contact Me</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="contact-form">
+                    <form onsubmit="sendEmail(); return false;">
+                        <div class="row">
+                            <div class="input-group">
+                                <input type="name" placeholder="Name" class="input-control" id="name" required />
+                            </div>
+                            <div class="input-group">
+                                <input type="email" placeholder="Email" class="input-control" id="email" required />
+                            </div>
+                            <div class="input-group">
+                                <input type="text" placeholder="Subject" class="input-control" id="subject" required />
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" placeholder="Message" class="input-control" required></textarea>
+                            </div>
+                            <div class="submit-btn">
+                                <button type="submit" class="btn">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <h3>Email</h3>
+                        <p>johndoe@example.com</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <h3>Phone</h3>
+                        <p>+1234567890</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <h3>Follow Me</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main End -->
+
+    <!-- Portfolio Item Details Popup Start -->
+    <div class="portfolio-popup">
+        <div class="pp-inner">
+            <div class="pp-content">
+                <div class="pp-header">
+                    <button type="button" class="btn pp-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="pp-thumbnail">
+                        <img src="images/portfolio/crypto.png" alt="pp-thumbnail" />
+                    </div>
+                    <h3></h3>
+                </div>
+                <div class="pp-body"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Item Details Popup End -->
+
+    <script src="js/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        // JavaScript code for sending email goes here
+    </script>
+</body>
+</html>
